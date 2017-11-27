@@ -1,6 +1,6 @@
 function init() {
 	var aleatorio = Math.floor((Math.random() * 3) + 1);
-	alert(aleatorio);
+	//alert(aleatorio);
 	
 	var conexao = escolheConexao(aleatorio);
 
@@ -9,16 +9,11 @@ function init() {
 	
 	database.on('value', (snap) => {
 		snap.forEach(function(data){
-			var content = '';
 			var val = data.val();
-
-			content += 'Filme: ' + val.nome;
-			content += ' - Ano: ' + val.ano;
-			content += ' - Diretor: ' + val.diretor;
-			content += '<br/>';
-
-			console.log(content);
-			$('#mensagens').append(content);
+			const filme = new Filme(val.nome, val.ano, val.diretor)
+			
+			console.log(filme.toString);
+			$('#mensagens').append(filme.toString);
 		});
 	});
 }
