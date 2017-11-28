@@ -1,3 +1,6 @@
+window.onload = init;
+elemento = document.getElementById("filme");
+
 function init() {
 	var aleatorio = Math.floor((Math.random() * 3) + 1);
 	//alert(aleatorio);
@@ -13,7 +16,10 @@ function init() {
 			const filme = new Filme(val.nome, val.ano, val.diretor)
 			
 			console.log(filme.toString);
-			$('#mensagens').append(filme.toString);
+			
+			elemento.innerHTML = elemento.innerHTML + filme.toString;
+			
+			//$('#filme').append(filme.toString);
 		});
 	});
 }
@@ -38,4 +44,3 @@ function escolheConexao(aleatorio) {
 	}
 }
 
-window.onload = init;
