@@ -1,41 +1,17 @@
 window.onload = init;
-//elemento = document.getElementById("filme");
+
+let tableFilme;
+let imagemFilme;
 
 function init() {
-	var aleatorio = Math.floor((Math.random() * 3) + 1);
-	//alert(aleatorio);
-	
-	var conexao = escolheConexao(aleatorio);
-
+	var conexao = escolheConexao();
 	var firebase = new Firebase(conexao);
 	var database = firebase.ref().child('filmes');
-	
-	var table = document.getElementById("filme");
-	
-	database.on('value', (snap) => {
-		snap.forEach(function(data){
-			var val = data.val();
-			
-			//const filme = new Filme(val.nome, val.ano, val.diretor);
-			//console.log(filme.toString);		
-			//elemento.innerHTML = elemento.innerHTML + filme.toString;
-			
-			////$('#filme').append(filme.toString);
-			
-			var row = table.insertRow(0);
-			
-			var cell1 = row.insertCell(0);
-			var cell2 = row.insertCell(1);	
-			var cell3 = row.insertCell(1);				
-			
-			cell1.innerHTML = val.nome;
-			cell2.innerHTML = val.ano;
-			cell3.innerHTML = val.diretor;
-		});
-	});
+	createView(database);
 }
 
-function escolheConexao(aleatorio) {
+function escolheConexao() {
+	var aleatorio = Math.floor((Math.random() * 3) + 1);
 	let cineclassico = 'https://cineclassico-4d826.firebaseio.com';
 	let classicine = 'https://classicine-1c6e2.firebaseio.com';
 	
@@ -55,3 +31,43 @@ function escolheConexao(aleatorio) {
 	}
 }
 
+function createView(database) {
+	tableFilme = document.getElementById("filme");
+	imagemFilme = document.getElementById("imagem");
+	
+	createTableHead();
+	
+	database.on('value', (snap) => {
+		snap.forEach(function(data){
+			let val = data.val();
+			var filme = new Filme(val.nome, val.ano, val.diretor, val.imagem);
+			
+			//Adicionando imagem ao HTML via DOM
+			//imagemFilme.src = val.imagem;
+			
+			createTableBody(filme);
+		});
+	});
+}
+
+function createTableHead() {
+	var linhaCabecalho = tableFilme.insertRow(0);
+	var cabecalho0 = linhaCabecalho.insertCell(0);
+	var cabecalho1 = linhaCabecalho.insertCell(1);	
+	var cabecalho2 = linhaCabecalho.insertCell(2);
+			
+	cabecalho0.innerHTML = "Nome";
+	cabecalho1.innerHTML = "Ano";
+	cabecalho2.innerHTML = "Diretor";
+}
+
+function createTableBody(filme) {	
+	var linha = tableFilme.insertRow(1);
+	var coluna0 = linha.insertCell(0);
+	var coluna1 = linha.insertCell(1);	
+	var coluna2 = linha.insertCell(2);
+	
+	coluna0.innerHTML = filme.getNome;
+	coluna1.innerHTML = filme.getAno;
+	coluna2.innerHTML = filme.getDiretor;
+}
