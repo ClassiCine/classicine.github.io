@@ -70,4 +70,14 @@ function createTableBody(filme) {
 	coluna0.innerHTML = filme.getNome;
 	coluna1.innerHTML = filme.getAno;
 	coluna2.innerHTML = filme.getDiretor;
+	
+	//var capaFilme = document.createElement("IMG");
+	//capaFilme.src = filme.getImagem;
+	
+	var btn = document.createElement("BUTTON");
+	btn.className += " btn btn-primary";
+	
+	var textoButton = document.createTextNode("Assistir");
+	btn.appendChild(textoButton);
+	linha.appendChild(btn);
 }
