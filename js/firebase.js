@@ -4,10 +4,23 @@ let tableFilme;
 let imagemFilme;
 
 function init() {
+	loadCarousel()
+	
 	var conexao = escolheConexao();
 	var firebase = new Firebase(conexao);
-	var database = firebase.ref().child('filmes');
+	var database = firebase.ref().child('categoria');
+	
 	//createView(database);
+}
+
+function loadCarousel() {
+	$(document).ready(function(){
+		$('.carousel').carousel({
+			dist:0,
+			shift:0,
+			padding:20,
+		});
+	});
 }
 
 function escolheConexao() {
@@ -29,20 +42,27 @@ function escolheConexao() {
 		case 6:
 			return classicine;
 	}
+	
 }
 
 function createView(database) {
 	tableFilme = document.getElementById("filme");
 	imagemFilme = document.getElementById("imagem");
 	
-	createTableHead();
+	//createTableHead();
 	
 	database.on('value', (snap) => {
 		snap.forEach(function(data){
-			let val = data.val();
-			var filme = new Filme(val.nome, val.ano, val.diretor, val.imagem);
 			
-			createTableBody(filme);
+			let val = data.val();
+			console.log(val.nome + " " + val.filmes[0].nome + " - " + val.filmes[1].nome);
+			
+			
+			
+			
+			//var filme = new Filme(val.nome, val.ano, val.diretor, val.imagem);
+			
+			//createTableBody(filme);
 		});
 	});
 }
