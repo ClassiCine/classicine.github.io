@@ -7,7 +7,7 @@ function init() {
 	var conexao = escolheConexao();
 	var firebase = new Firebase(conexao);
 	var database = firebase.ref().child('filmes');
-	createView(database);
+	//createView(database);
 }
 
 function escolheConexao() {
@@ -41,9 +41,6 @@ function createView(database) {
 		snap.forEach(function(data){
 			let val = data.val();
 			var filme = new Filme(val.nome, val.ano, val.diretor, val.imagem);
-			
-			//Adicionando imagem ao HTML via DOM
-			//imagemFilme.src = val.imagem;
 			
 			createTableBody(filme);
 		});
