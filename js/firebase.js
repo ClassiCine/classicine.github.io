@@ -10,7 +10,7 @@ function init() {
 	var firebase = new Firebase(conexao);
 	var database = firebase.ref().child('categoria');
 	
-	//createView(database);
+	createView(database);
 }
 
 function loadCarousel() {
@@ -56,9 +56,6 @@ function createView(database) {
 			
 			let val = data.val();
 			console.log(val.nome + " " + val.filmes[0].nome + " - " + val.filmes[1].nome);
-			
-			
-			
 			
 			//var filme = new Filme(val.nome, val.ano, val.diretor, val.imagem);
 			
