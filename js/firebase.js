@@ -53,14 +53,18 @@ function createView(database) {
 	
 	database.on('value', (snap) => {
 		snap.forEach(function(data){
-			
 			let val = data.val();
-			console.log(val.nome + " " + val.filmes[0].nome + " - " + val.filmes[1].nome);
 			
-			//var filme = new Filme(val.nome, val.ano, val.diretor, val.imagem);
-			
-			//createTableBody(filme);
+			console.log(val.nome);
+			testeFor(val.filmes);
+			console.log('-----------------------------------------------');
 		});
+	});
+}
+
+function testeFor(item) {
+	item.forEach(function(data){
+		console.log("Nome: " + data.nome + " Ano: " + data.ano);
 	});
 }
 
