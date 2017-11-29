@@ -10,3 +10,9 @@ body h1{
 body p{ 
 	color: #FFFFFF !important; 
 }
+#card-filme {
+	width: 10rem;
+}
+#button-assistir {
+	width: 150px;
+}
