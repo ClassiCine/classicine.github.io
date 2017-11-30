@@ -3,144 +3,50 @@
 	<head>
 		<title>Home</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-		<!--Let browser know website is optimized for mobile-->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<meta name="description" content="Classicine">
+		<meta name="author" content="Kleber Nunes">
 		
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		
 		<link rel="shortcut icon" href="img/ico.png" />
 		<link rel="stylesheet" href="css/styles.css">
-		<!--Import materialize.css-->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-		
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<script src="https://cdn.firebase.com/js/client/1.0.17/firebase.js"></script>
 	</head>
 	
-	<body>
+	<body ng-app="index" ng-controller="IndexController">
 		<div class="container">
 			<h1 class="page-header">Home</h1>
+			{{categorias}}
+			<div ng-init="getCategorias()">
+				<div ng-repeat="categoria in categorias">
+				
+					<h1>{{categoria}}</h1>
+				</div>
+			</div>
 			
-			<div class="carousel">
-				<h1>Categoria</h1>
+			<!--<div class="carousel">
+				<div>
+					<h1>Categoria</h1>
+				</div>
 				
 				<a class="carousel-item" href="html/player.html">
 					<img src="https://firebasestorage.googleapis.com/v0/b/classicine-1c6e2.appspot.com/o/casablanca.jpg?alt=media&token=5dbf888d-40c5-4fae-acb8-3d6b07f075f6">
 				</a>
-				<a class="carousel-item" href="html/player.html">
-					<img src="https://firebasestorage.googleapis.com/v0/b/classicine-1c6e2.appspot.com/o/casablanca.jpg?alt=media&token=5dbf888d-40c5-4fae-acb8-3d6b07f075f6">
-				</a>
-				<a class="carousel-item" href="html/player.html">
-					<img src="https://firebasestorage.googleapis.com/v0/b/classicine-1c6e2.appspot.com/o/casablanca.jpg?alt=media&token=5dbf888d-40c5-4fae-acb8-3d6b07f075f6">
-				</a>
-				<a class="carousel-item" href="html/player.html">
-					<img src="https://firebasestorage.googleapis.com/v0/b/classicine-1c6e2.appspot.com/o/casablanca.jpg?alt=media&token=5dbf888d-40c5-4fae-acb8-3d6b07f075f6">
-				</a>
-				<a class="carousel-item" href="html/player.html">
-					<img src="https://firebasestorage.googleapis.com/v0/b/classicine-1c6e2.appspot.com/o/casablanca.jpg?alt=media&token=5dbf888d-40c5-4fae-acb8-3d6b07f075f6">
-				</a>
-				<a class="carousel-item" href="html/player.html">
-					<img src="https://firebasestorage.googleapis.com/v0/b/classicine-1c6e2.appspot.com/o/casablanca.jpg?alt=media&token=5dbf888d-40c5-4fae-acb8-3d6b07f075f6">
-				</a>
-				<a class="carousel-item" href="html/player.html">
-					<img src="https://firebasestorage.googleapis.com/v0/b/classicine-1c6e2.appspot.com/o/casablanca.jpg?alt=media&token=5dbf888d-40c5-4fae-acb8-3d6b07f075f6">
-				</a>
-				<a class="carousel-item" href="html/player.html">
-					<img src="https://firebasestorage.googleapis.com/v0/b/classicine-1c6e2.appspot.com/o/casablanca.jpg?alt=media&token=5dbf888d-40c5-4fae-acb8-3d6b07f075f6">
-				</a>
-				<a class="carousel-item" href="html/player.html">
-					<img src="https://firebasestorage.googleapis.com/v0/b/classicine-1c6e2.appspot.com/o/casablanca.jpg?alt=media&token=5dbf888d-40c5-4fae-acb8-3d6b07f075f6">
-				</a>
-				<a class="carousel-item" href="html/player.html">
-					<img src="https://firebasestorage.googleapis.com/v0/b/classicine-1c6e2.appspot.com/o/casablanca.jpg?alt=media&token=5dbf888d-40c5-4fae-acb8-3d6b07f075f6">
-				</a>
-			</div>
+			</div>-->
 			
-			<!--<ul>
-				<li>
-					<ul class="list-inline">
-						<li class="list-inline-item">
-							<div id="card-filme" class="card">
-								<img class="card-img-top" src="https://firebasestorage.googleapis.com/v0/b/classicine-1c6e2.appspot.com/o/casablanca.jpg?alt=media&token=5dbf888d-40c5-4fae-acb8-3d6b07f075f6" alt="Card image cap">
-								<div class="card-block">
-									<div class="p-1">
-										<h4 class="card-title">Casablanca</h4>
-										<a id="button-assistir" href="html/player.html" class="btn btn-primary">Assistir</a>
-									</div>
-								</div>
-							</div>
-						</li>
-						<li class="list-inline-item">
-							<div id="card-filme" class="card">
-								<img class="card-img-top" src="https://firebasestorage.googleapis.com/v0/b/classicine-1c6e2.appspot.com/o/casablanca.jpg?alt=media&token=5dbf888d-40c5-4fae-acb8-3d6b07f075f6" alt="Card image cap">
-								<div class="card-block">
-									<div class="p-1">
-										<h4 class="card-title">Casablanca</h4>
-										<a id="button-assistir" href="html/player.html" class="btn btn-primary">Assistir</a>
-									</div>
-								</div>
-							</div>
-						</li>
-					</ul>
-				</li>
-				<br/>
-				<li>
-					<ul class="list-inline">
-						<li class="list-inline-item">
-							<div id="card-filme" class="card">
-								<img class="card-img-top" src="https://firebasestorage.googleapis.com/v0/b/classicine-1c6e2.appspot.com/o/casablanca.jpg?alt=media&token=5dbf888d-40c5-4fae-acb8-3d6b07f075f6" alt="Card image cap">
-								<div class="card-block">
-									<div class="p-1">
-										<h4 class="card-title">Casablanca</h4>
-										<a id="button-assistir" href="html/player.html" class="btn btn-primary">Assistir</a>
-									</div>
-								</div>
-							</div>
-						</li>
-						<li class="list-inline-item">
-							<div id="card-filme" class="card">
-								<img class="card-img-top" src="https://firebasestorage.googleapis.com/v0/b/classicine-1c6e2.appspot.com/o/casablanca.jpg?alt=media&token=5dbf888d-40c5-4fae-acb8-3d6b07f075f6" alt="Card image cap">
-								<div class="card-block">
-									<div class="p-1">
-										<h4 class="card-title">Casablanca</h4>
-										<a id="button-assistir" href="html/player.html" class="btn btn-primary">Assistir</a>
-									</div>
-								</div>
-							</div>
-						</li>
-					</ul>
-				</li>
-			</ul>-->
-			
-			<!--<br/>
-			<table id="filme" class="table table-bordered table-dark">
-				<thead class="thead-inverse">
-                    <tr>
-                        <th>Nome</th>
-                        <th>Ano</th>
-                        <th>Diretor</th>
-						<th>Button</th>
-                    </tr>
-				</thead>
-
-				<tr>
-					<tbody>
-						<td><img src="https://firebasestorage.googleapis.com/v0/b/classicine-1c6e2.appspot.com/o/casablanca.jpg?alt=media&token=5dbf888d-40c5-4fae-acb8-3d6b07f075f6" height="50" width="50" class="rounded" alt="Casablanca"></td>
-						<td>Casablanca</td>
-						<td>1942</td>
-						<td>Não Sei</td>
-						<td><a class="btn btn-primary" href="html/player.html" role="button">Assistir</a></td>
-					</tbody>
-				</tr>
-			</table>-->
 		</div>
 		
-		<script src="js/firebase.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://cdn.firebase.com/js/client/1.0.17/firebase.js"></script>
 		<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+		
+		<script src="js/main.js"></script>
 	</body>
 </html>
