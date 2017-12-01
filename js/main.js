@@ -4,12 +4,16 @@ var firebase = new Firebase(conexao);
 var database = firebase.ref().child('categoria');
 
 app.controller('IndexController', ["$scope", "$timeout", function($scope, $timeout){
+	
 	database.on('value', function(snap) {
 		
 		$timeout(function() {
 			$scope.categorias = snap.val();
+			$scope.linkFilme = "html/player.html";
 		});
 	});
+	
+	
 }]);
 
 function loadCarousel() {
