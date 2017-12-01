@@ -1,11 +1,16 @@
-var app = angular.module("index", ['firebase']);
+var app = angular.module("index", []);
 var conexao = escolheConexao();
 var firebase = new Firebase(conexao);
 var database = firebase.ref().child('categoria');
 
-app.controller('IndexController', function($scope, $firebase) {
-	$scope.categorias = ["Teste1", "Teste2"];
-});
+app.controller('IndexController', ["$scope", "$timeout", function($scope, $timeout){
+	database.on('value', function(snap) {
+		
+		$timeout(function() {
+			$scope.categorias = snap.val();
+		});
+	});
+}]);
 
 function loadCarousel() {
 	$(document).ready(function(){
@@ -38,19 +43,3 @@ function escolheConexao() {
 	}
 	
 }
-
-function setArrayDatabase(database, callback) {
-	var names = [];
-
-	database.on('value', (snap) => {
-		snap.forEach(function(data){
-			let val = data.val();
-			names.push(val.nome);
-		});
-		
-		console.log(names);
-		callback(names);	
-	});
-}
-
-

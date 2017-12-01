@@ -1,9 +1,9 @@
 class Filme {
-	constructor(nome, ano, diretor, imagem) {
+	constructor(nome, ano, diretor) {
 		this.nome = nome;
 		this.ano = ano;
 		this.diretor = diretor;
-		this.imagem = imagem
+		//this.imagem = imagem;
 	}
 	
 	get getNome() {
@@ -18,9 +18,9 @@ class Filme {
 		return this.diretor;
 	}
 	
-	get getImagem() {
-		return this.imagem;
-	}
+	//get getImagem() {
+		//return this.imagem;
+	//}
 	
 	get toString() {
 		var content = '';
@@ -28,7 +28,7 @@ class Filme {
 		content += 'Filme: ' + this.name;
 		content += ' - Ano: ' + this.ano;
 		content += ' - Diretor: ' + this.diretor;
-		content += ' - Imagem: ' + this.imagem;
+		//content += ' - Imagem: ' + this.imagem;
 		content += '<br/>';
 		
 		return content;
