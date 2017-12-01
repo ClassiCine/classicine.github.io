@@ -16,13 +16,12 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 	</head>
 	
-	<body ng-app="index" ng-controller="IndexController">
+	<body ng-app="index">
 		<div class="container">
 			<h1 class="page-header">Home</h1>
-			{{categorias}}
-			<div ng-init="getCategorias()">
-				<div ng-repeat="categoria in categorias">
-				
+			
+			<div ng-controller="IndexController">
+				<div ng-repeat="categoria in categorias">	
 					<h1>{{categoria}}</h1>
 				</div>
 			</div>
@@ -43,7 +42,7 @@
 		<script src="https://cdn.firebase.com/js/client/1.0.17/firebase.js"></script>
 		<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+		<script src="js/angular.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 		

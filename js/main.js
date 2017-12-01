@@ -1,4 +1,11 @@
-var app = angular.module('index', []);
+var app = angular.module("index", ['firebase']);
+var conexao = escolheConexao();
+var firebase = new Firebase(conexao);
+var database = firebase.ref().child('categoria');
+
+app.controller('IndexController', function($scope, $firebase) {
+	$scope.categorias = ["Teste1", "Teste2"];
+});
 
 function loadCarousel() {
 	$(document).ready(function(){
@@ -46,20 +53,4 @@ function setArrayDatabase(database, callback) {
 	});
 }
 
-	app.controller('IndexController', function($scope) {
-		
-		var conexao = escolheConexao();
-		var firebase = new Firebase(conexao);
-		var database = firebase.ref().child('categoria');
-		
-		//$scope.categorias = [];
-		
-		$scope.getCategorias = function(){
-			setArrayDatabase(database, function(names) {
-				$scope.categorias = names;
-				console.log("1", $scope.categorias);
-			});
-		}		
-		
-		//console.log("2", $scope.categorias);
-	});
+
