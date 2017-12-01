@@ -16,17 +16,19 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 	</head>
 	
-	<body ng-app="index">
+	<body ng-app="index" ng-controller="IndexController">
 		<div class="container">
 			<h1 class="page-header">Home</h1>
 			
-			<div ng-controller="IndexController">
-				<div ng-repeat="categoria in categorias">	
-					<h1>{{categoria}}</h1>
+			<div ng-repeat="categoria in categorias">
+				<h1>{{categoria.nome}}</h1>
+				
+				<div ng-repeat="filme in categoria.filmes">
+					<p>{{filme.nome}}</p>
 				</div>
 			</div>
 			
-			<!--<div class="carousel">
+			<div class="carousel">
 				<div>
 					<h1>Categoria</h1>
 				</div>
@@ -34,8 +36,7 @@
 				<a class="carousel-item" href="html/player.html">
 					<img src="https://firebasestorage.googleapis.com/v0/b/classicine-1c6e2.appspot.com/o/casablanca.jpg?alt=media&token=5dbf888d-40c5-4fae-acb8-3d6b07f075f6">
 				</a>
-			</div>-->
-			
+			</div>
 		</div>
 		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -47,5 +48,6 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 		
 		<script src="js/main.js"></script>
+		<script src="js/filme.js"></script>
 	</body>
 </html>
