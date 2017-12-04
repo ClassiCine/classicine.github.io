@@ -1,30 +1,21 @@
-var app = angular.module("index", []);
+var app = angular.module("main", []);
 var conexao = escolheConexao();
 var firebase = new Firebase(conexao);
 var database = firebase.ref().child('categoria');
 
-app.controller('IndexController', ["$scope", "$timeout", function($scope, $timeout){
+app.controller('MainController', ['$scope', '$timeout', function($scope, $timeout){
 	
 	database.on('value', function(snap) {
-		
 		$timeout(function() {
 			$scope.categorias = snap.val();
-			$scope.linkFilme = "html/player.html";
+			$scope.linkFilme = 'html/player.html';
 		});
 	});
 	
-	
+	$scope.assistir = function(filme){
+		sessionStorage.setItem('filme', JSON.stringify(filme));
+	}
 }]);
-
-function loadCarousel() {
-	$(document).ready(function(){
-		$('.carousel').carousel({
-			dist:0,
-			shift:0,
-			padding:20,
-		});
-	});
-}
 
 function escolheConexao() {
 	var aleatorio = Math.floor((Math.random() * 3) + 1);
