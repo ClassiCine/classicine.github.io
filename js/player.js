@@ -2,11 +2,7 @@ var app = angular.module("player", []);
 var filme = JSON.parse(sessionStorage.getItem('filme'));
 
 app.controller('PlayerController', function ($scope){
-	$scope.nome = filme.nome;
-	$scope.ano = filme.ano;
-	$scope.diretor = filme.diretor;
-	$scope.duracao = filme.duracao;
-	$scope.sinopse = filme.sinopse;
+	
 });
 
 app.controller('FramePlayer', ['$scope', '$sce', function ($scope, $sce) {

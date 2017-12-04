@@ -5,19 +5,19 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="shortcut icon" href="../img/ico.png" />
-		<link rel="stylesheet" href="../css/styles.css">
+		<link rel="stylesheet" href="../css/player.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 	</head>
 	
 	<body id="player" ng-app="player">
-		<div class="container" ng-controller="PlayerController">
-			<h1>{{nome}} - {{ano}}</h1>
-			<h3>Diretor: {{diretor}}</h3>
-			<p>Duracao: {{duracao}}</p>
-			<p>Sinopse: {{sinopse}}</p>
-			
-			<div align="center" class="embed-responsive embed-responsive-21by9" ng-controller="FramePlayer">
-				<iframe class="embed-responsive-item" frameborder="0" width="200" height="200" ng-src="{{url}}" allowfullscreen></iframe>
+		<!--<div class="container" ng-controller="PlayerController">
+			<div align="center" ng-controller="FramePlayer">
+				<iframe class="embed-responsive-item" ng-src="{{url}}" style="position:absolute;" allowfullscreen></iframe>
+			</div>
+		</div>-->
+		<div align="center" ng-controller="FramePlayer">
+			<div class="second-row">
+				<iframe ng-src="{{url}}"></iframe>
 			</div>
 		</div>
 	</body>
