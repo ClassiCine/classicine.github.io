@@ -1,5 +1,10 @@
 body { 
-	background: #757575 !important;
+	font-family: "Open Sans", Helvetica, Arial, sans-serif;
+	background: url('../img/bg.jpg') no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	-o-background-size: cover;
 }
 #player {
 	background: #000000 !important;

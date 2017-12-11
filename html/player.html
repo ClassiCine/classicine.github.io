@@ -11,10 +11,32 @@
 	
 	<body id="player" ng-app="player">
 		<div class="container" ng-controller="PlayerController">
-			<div align="center" class="embed-responsive embed-responsive-16by9" ng-controller="FramePlayer">
-				<iframe class="embed-responsive-item" ng-src="{{url}}" frameborder="0" allowfullscreen></iframe>
+			<div class="bg-faded p-4 my-4">
+				<div align="center" class="embed-responsive embed-responsive-16by9" ng-controller="FramePlayer">
+					<iframe class="embed-responsive-item" ng-src="{{url}}" frameborder="0" allowfullscreen></iframe>
+				</div>
+				
+				<div class="bg-faded p-4 my-4">
+					<hr class="divider">
+					<h2 class="text-center text-lg text-uppercase my-0">
+						<strong>{{titulo}}</strong>
+					</h2>
+					<hr class="divider">
+					<p>Ano: {{ano}}</p>
+					<p>Nota: {{nota}}</p>
+					<p>Duração: {{duracao}}</p>
+					<p>Diretor: {{diretor}}</p>
+					<p>Sinopse: {{sinopse}}</p>
+				</div>
+				
 			</div>
 		</div>
+		
+		<footer class="bg-faded text-center py-2">
+			<div class="container">
+				<p class="m-0">Copyright &copy; Studio Trek 2017</p>
+			</div>
+		</footer>
 	</body>
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
