@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Hind:400,700");
 body { 
 	font-family: "Open Sans", Helvetica, Arial, sans-serif;
 	background: url('../img/bg.jpg') no-repeat center center fixed;
@@ -5,6 +6,10 @@ body {
 	-moz-background-size: cover;
 	background-size: cover;
 	-o-background-size: cover;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
 }
 #player {
 	background: #000000 !important;
@@ -20,4 +25,53 @@ body p{
 }
 #button-assistir {
 	width: 150px;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+h3 {
+  text-align: center;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+.carousel-wrapper .carousel .carousel-cell {
+  padding: 10px;
+  background-color: #FFFFFF;
+  width: 15%;
+  height: auto;
+  min-width: 100px;
+  margin: 0 20px;
+  transition: transform 500ms ease;
+}
+.carousel-wrapper .carousel .carousel-cell .more {
+  display: block;
+  opacity: 0;
+  margin: 5px 0 15px 0;
+  text-align: center;
+  font-size: 10px;
+  color: #CFCFCF;
+  text-decoration: none;
+  transition: opacity 300ms ease;
+}
+.carousel-wrapper .carousel .carousel-cell .more:hover, .carousel-wrapper .carousel .carousel-cell .more:active, .carousel-wrapper .carousel .carousel-cell .more:visited, .carousel-wrapper .carousel .carousel-cell .more:focus {
+  color: #CFCFCF;
+  text-decoration: none;
+}
+.carousel-wrapper .carousel .carousel-cell.is-selected {
+  transform: scale(1.2);
+}
+.carousel-wrapper .carousel .carousel-cell.is-selected .line {
+  height: 35px;
+}
+.carousel-wrapper .carousel .carousel-cell.is-selected .price, .carousel-wrapper .carousel .carousel-cell.is-selected .more {
+  opacity: 1;
+}
+.carousel-wrapper .flickity-page-dots {
+  display: none;
+}
+.carousel-wrapper .flickity-viewport, .carousel-wrapper .flickity-slider {
+  overflow: visible;
 }
