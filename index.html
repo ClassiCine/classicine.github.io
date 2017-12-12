@@ -20,26 +20,9 @@
 			<div ng-repeat="categoria in categorias">
 				<h1>{{categoria.nome}}</h1>
 				
-				<div class="carousel-wrapper">
+				<div ng-repeat="filme in categoria.filmes">
 					
-					<div ng-repeat="filme in categoria.filmes">	
-						<div class="carousel" data-flickity>
-						<div class="carousel-cell">
-							<h3>{{filme.nome}}</h3>
-							<a class="more" href="">Explore more</a>
-							<img src="https://images.unsplash.com/photo-1464305795204-6f5bbfc7fb81?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=" height="200" width="200"/>
-							<div class="line"></div>
-							<div class="price">
-								<span>225<sup>€</sup></span>
-							</div>
-						</div>
-						</div>
-					</div>
-				
 				</div>
-				
-				<br/><br/><br/>
-				
 			</div>
 		</div>
 	</body>
