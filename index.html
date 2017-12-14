@@ -17,49 +17,41 @@
 	
 	<body ng-app="main" ng-controller="MainController">
   		<div class="container">
+			
  			<h1 class="page-header">Home</h1>
  			
   			<div ng-repeat="categoria in categorias">
   				<h1>{{categoria.nome}}</h1>
   				
- 				<div ng-repeat="filme in categoria.filmes">	
- 					<p>{{filme.nome}}</p>
-					<div class="carousel-wrapper">
+ 				<div ng-repeat="filme in categoria.filmes">
+					<h1>Categoria A</h1>
+					<div class="carousel" data-flickity='{ "wrapAround": true }'>
+						<div class="carousel-cell"></div>
+						<div class="carousel-cell"></div>
+						<div class="carousel-cell"></div>
+						<div class="carousel-cell"></div>
+						<div class="carousel-cell"></div>
+					</div>
 					
-						<div class="carousel" data-flickity>
-							<div ng-repeat="filme in categoria.filmes">		
-								<div class="carousel-cell">
-									<h3>{{filme.nome}}</h3>
-									<a class="more" href="">Explore more</a>
-									<img src="https://images.unsplash.com/photo-1464305795204-6f5bbfc7fb81?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=" height="200" width="200"/>
-									<div class="line"></div>
-									<div class="price">
-										<span>225<sup>€</sup></span>
-									</div>
-								</div>
-							</div>
-						</div>			
-					</div>  			 				
+					<br/><br/>
 				</div> 			
 			</div>
-		</div>
-  	</body>
-	
-	<!--<body ng-app="main" ng-controller="MainController">
-		<div class="container">
-			<h1 class="page-header">Home</h1>
 			
-			<div ng-repeat="categoria in categorias">
-				<h1>{{categoria.nome}}</h1>
-				
-				<div ng-repeat="filme in categoria.filmes">	
-					<p>{{filme.nome}}</p>
-				</div>
-				
+			
+			<h1>Categoria A</h1>
+			<div class="carousel" data-flickity='{ "wrapAround": true }'>
+				<div class="carousel-cell"></div>
+				<div class="carousel-cell"></div>
+				<div class="carousel-cell"></div>
+				<div class="carousel-cell"></div>
+				<div class="carousel-cell"></div>
 			</div>
 			
+			<br/><br/>
+			
+			
 		</div>
-	</body>-->
+  	</body>
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://cdn.firebase.com/js/client/1.0.17/firebase.js"></script>
@@ -70,11 +62,4 @@
 	<script src="https://unpkg.com/flickity@2.0/dist/flickity.pkgd.min.js"></script>
 	<script src="js/main.js"></script>
 	<script src="js/filme.js"></script>
-	<script>
-	$('.carousel').flickity({
-		// options
-		cellAlign: 'left',
-		contain: true
-	});
-	</script>
 </html>
