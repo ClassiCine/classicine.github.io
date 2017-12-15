@@ -1,6 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Hind:400,700");
 body { 
 	background: url('../img/bg.jpg') no-repeat center center fixed; 
+	background-repeat:no-repeat;
+	background-size:contain;
+	background-position:center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
