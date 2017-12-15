@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Hind:400,700");
-body { 
+html { 
 	background: url('../img/bg.jpg') no-repeat center center fixed; 
 	background-repeat:no-repeat;
 	background-size:contain;
@@ -9,7 +9,28 @@ body {
 	-o-background-size: cover;
 	background-size: cover;
 }
-
-@media only screen and (min-width : 320px) and (max-width : 480px) {
-	background: url('../img/ch.jpg') no-repeat center center fixed;
+#player {
+	background: #000000 !important;
+}
+body h1{ 
+	color: #FFFFFF !important; 
+}
+body p{ 
+	color: #FFFFFF !important; 
+}
+#card-filme {
+	width: 10rem;
+}
+#button-assistir {
+	width: 150px;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+h3 {
+  text-align: center;
+  font-weight: 400;
+  margin-bottom: 0;
 }
