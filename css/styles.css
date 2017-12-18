@@ -1,13 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Hind:400,700");
-html { 
-	background: url('../img/bg.jpg') no-repeat center center fixed; 
-	background-repeat:no-repeat;
-	background-size:contain;
-	background-position:center;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
+body {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  background: url('../img/bg.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
 }
 #player {
 	background: #000000 !important;
@@ -34,3 +32,18 @@ h3 {
   font-weight: 400;
   margin-bottom: 0;
 }
+
+/*
+
+html {
+	background: url('../img/bg.jpg') no-repeat center center fixed; 
+	background-repeat:no-repeat;
+	background-size:contain;
+	background-position:center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+*/
