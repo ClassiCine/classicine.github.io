@@ -7,36 +7,32 @@
 		<meta name="description" content="Classicine">
 		<meta name="author" content="Kleber Nunes">
 		
-		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-		
 		<link rel="shortcut icon" href="img/ico.png" />
 		<link rel="stylesheet" href="css/styles.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 	</head>
 	
 	<body ng-app="main" ng-controller="MainController">
-		
-			<div class="container">
-				<h1 class="page-header">Home</h1>
+		<div class="container">
+			<h1 class="page-header">Home</h1>
 			
-				<div ng-repeat="categoria in categorias">
-					<h1>{{categoria.nome}}</h1>
+			<div ng-repeat="categoria in categorias">
+				<h1>{{categoria.nome}}</h1>
 				
-					<div ng-repeat="filme in categoria.filmes">
-						<img src="{{filme.imagem}}" height="200" width="180" class="img-rounded" alt="Cinque Terre">
+				<div ng-repeat="filme in categoria.filmes">
+					<img src="{{filme.imagem}}" height="200" width="180" class="img-rounded" alt="Cinque Terre">
 						
-						<p>Filme: {{filme.nome}}</p>
-						<a class="btn btn-primary" ng-click="assistir(filme)" href="html/player.html" role="button">Assistir<br/></a>
-						<br/><br/>
-					</div>
+					<p>Filme: {{filme.nome}}</p>
+					<a class="btn btn-primary" ng-click="assistir(filme)" href="html/player.html" role="button">Assistir<br/></a>
+					<br/><br/>
 				</div>
 			</div>
+		</div>
 	
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="https://cdn.firebase.com/js/client/1.0.17/firebase.js"></script>
 		<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-		<script src="js/angular.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 		<script src="js/main.js"></script>
