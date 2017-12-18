@@ -28,24 +28,20 @@
 				<uib-carousel active="activeSlide">
 					<uib-slide ng-repeat="filme in categoria.filmes" index="$index">
 						
-						<img ng-src="{{filme.imagem}}" style="margin:auto;">
-							
-						<div class="carousel-caption">
+						<div id="teste">
+							<img ng-src="{{filme.imagem}}" style="margin:auto;">
 							<p>{{filme.nome}}</p>
-							<a class="btn btn-primary" ng-click="assistir(filme)" href="html/player.html" role="button">Assistir<br/></a>
+							<a class="btn btn-primary" ng-click="assistir(filme)" href="html/player.html" role="button">Assistir</a>
+							<br/><br/><br/>
 						</div>
-							
+						
 					</uib-slide>
 				</uib-carousel>
 				
 			</uib-accordion-header>
 		</div>
 	</body>
-	<!--
-	<script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-1.2.1.js"></script>
-	-->
 	<script src="js/angular-ui-bootstrap.1.2.1.js"></script>
-	
 	<script src="https://cdn.firebase.com/js/client/1.0.17/firebase.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="js/main.js"></script>
