@@ -12,25 +12,22 @@
 	</head>
 	
 	<body ng-controller="MainController">
-		<div class="container-fluid blok">
-			<div class="container">
-				<h1 class="page-header">Home</h1>
+		<div class="container">
+			<h1 class="page-header">Home</h1>
 			
 			
-				<div ng-repeat="categoria in categorias">
-					<h1>{{categoria.nome}}</h1>
+			<div ng-repeat="categoria in categorias">
+				<h1>{{categoria.nome}}</h1>
 				
-					<div ng-repeat="filme in categoria.filmes">
-						<img src="{{filme.imagem}}" height="200" width="180" class="img-rounded" alt="Cinque Terre">
+				<div ng-repeat="filme in categoria.filmes">
+					<img src="{{filme.imagem}}" height="200" width="180" class="img-rounded" alt="Cinque Terre">
 						
-						<p>Filme: {{filme.nome}}</p>
-						<a class="btn btn-primary" ng-click="assistir(filme)" href="html/player.html" role="button">Assistir<br/></a>
-						<br/><br/>
-					</div>
+					<p>Filme: {{filme.nome}}</p>
+					<a class="btn btn-primary" ng-click="assistir(filme)" href="html/player.html" role="button">Assistir<br/></a>
+					<br/><br/>
 				</div>
 			</div>
 		</div>
-		
 	</body>
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
