@@ -12,8 +12,15 @@
 	<body id="player" ng-controller="PlayerController">
 		<div class="container">
 			<div class="bg-faded p-4 my-4">
-				<div align="center" class="embed-responsive embed-responsive-16by9" ng-controller="FramePlayer">
-					<iframe class="embed-responsive-item" ng-src="{{url}}" frameborder="0" allowfullscreen></iframe>
+				
+				<div id="filme" style="width:100%;height:450px;background:black">
+					<video
+						id="video-play"
+						width="100%" 
+						height="450px"
+						src="{{url | trusted}}" 
+						controls poster="{{img}}">
+					</video>
 				</div>
 				
 				<div class="bg-faded p-4 my-4">

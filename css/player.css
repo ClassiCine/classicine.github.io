@@ -15,6 +15,10 @@ h1 {
   font-size: 4rem;
 }
 
+.filme {
+	background-color:black;
+}
+
 .tagline-upper {
   font-size: 5rem;
   font-weight: 700;
