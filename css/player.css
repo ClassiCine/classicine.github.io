@@ -1,10 +1,10 @@
-body {
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
-  background: url('../img/bg.jpg') no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
+.player-body {
+	background: url('../img/bg.jpg') no-repeat center center fixed;
+	background-size: cover;
+	font-family: "Open Sans", Helvetica, Arial, sans-serif;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	-webkit-background-size: cover;
 }
 
 h1, h2, h3, h4, h5, h6, .text-heading {
@@ -15,8 +15,10 @@ h1 {
   font-size: 4rem;
 }
 
-.filme {
-	background-color:black;
+.filme-play {
+	background:black;
+	height:450px;
+	width:100%;
 }
 
 .tagline-upper {

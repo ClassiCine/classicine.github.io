@@ -1,45 +1,30 @@
 @import url("https://fonts.googleapis.com/css?family=Hind:400,700");
-header {
-    position: fixed;
+.main-body {
+	background: url('../img/bg.jpg') no-repeat center center fixed;
+	background-size: cover;
+	font-family: "Open Sans", Helvetica, Arial, sans-serif;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	-webkit-background-size: cover;
+}
+.sessao {
+	margin-top: 100px;
+}
+.header-topo {
+	position: fixed;
+	top: 0px;
     width: 100%;
-    top: 0px;
+	z-index: 1;
 }
-
-body {
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
-  background: url('../img/bg.jpg') no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
+.nome-filme {
+	color: #FFFFFF;
 }
-
-section {
-    margin-top: 50px;
+.nome-categoria {
+	color: #FFFFFF; 
 }
-
-#player {
-	background: #000000 !important;
-}
-body h1{ 
-	color: #FFFFFF !important; 
-}
-body p{ 
-	color: #FFFFFF !important; 
-}
-#card-filme {
-	width: 10rem;
-}
-#button-assistir {
-	width: 150px;
-}
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-h3 {
-  text-align: center;
-  font-weight: 400;
-  margin-bottom: 0;
+.capa-filme {
+	display: block;
+	height: auto;
+	margin:auto;
+	max-width: 100%;
 }

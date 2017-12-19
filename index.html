@@ -17,42 +17,40 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 	</head>
 	
-	<body ng-controller="MainController">
-		<header>
-			<nav class="navbar navbar-inverse">
-				<div class="container-fluid">
-				
-					<div class="nav navbar-nav navbar-left">
-						<li>
-							<a href="index.html">
-								ClassiCine
-							</a>
-						</li>
-					</div>
-					
-					<form class="navbar-form navbar-right" action="/action_page.php">
-						<div class="form-group">
-							<input type="text" class="form-control" placeholder="Search">
+	<body class="main-body" ng-controller="MainController">
+		<header class="header-topo">
+				<nav class="navbar navbar-inverse">
+					<div class="container-fluid">
+						<div class="nav navbar-nav navbar-left">
+							<li>
+								<a href="index.html">
+									ClassiCine
+								</a>
+							</li>
 						</div>
-						
-						<button type="submit" class="btn btn-info">Pesquisar</button>
-					</form>
 					
-				</div>
-			</nav> 
+						<form class="navbar-form navbar-right" action="/action_page.php">
+							<div class="form-group">
+								<input type="text" class="form-control" placeholder="Search">
+							</div>
+						
+							<button type="submit" class="btn btn-info">Pesquisar</button>
+						</form>
+					</div>
+				</nav> 
 		</header>
 		
-		<section>
+		<section class="sessao">
 			<div class="container">
 				<uib-accordion-header ng-repeat="categoria in categorias">
-					<h1>{{categoria.nome}}<h1>
+					<h1 class="nome-categoria">{{categoria.nome}}<h1>
 				
 					<uib-carousel active="activeSlide">
 						<uib-slide ng-repeat="filme in categoria.filmes" index="$index">
 						
-							<div id="teste">
-								<img ng-src="{{filme.imagem}}" style="margin:auto;">
-								<p>{{filme.nome}}</p>
+							<div>
+								<img class="capa-filme" ng-src="{{filme.imagem}}" style="margin:auto;">
+								<p class="nome-filme">{{filme.nome}}</p>
 								<a class="btn btn-primary" ng-click="assistir(filme)" href="html/player.html" role="button">Assistir</a>
 								<br/><br/><br/>
 							</div>
