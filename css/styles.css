@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Hind:400,700");
 .main-body {
-	background: url('../img/bg.jpg') no-repeat center center fixed;
+	background-color: #424242;
 	background-size: cover;
 	font-family: "Open Sans", Helvetica, Arial, sans-serif;
 	-moz-background-size: cover;
