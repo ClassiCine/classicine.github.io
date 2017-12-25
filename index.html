@@ -10,45 +10,60 @@
 		<meta name="description" content="Classicine">
 		<meta name="author" content="Kleber Nunes">
 		
-		<link rel="shortcut icon" href="img/ico.png" />
+		<link rel="shortcut icon" href="img/icon_classic.png" />
 		<link rel="stylesheet" href="css/styles.css">
 		<link rel="stylesheet" href="css/ui-bootstrap-csp.css">
+
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
 	</head>
 	
 	<body class="main-body" ng-controller="MainController">
 		<header class="header-topo">
-				<nav class="navbar navbar-inverse">
-					<div class="container-fluid">
-						<div class="nav navbar-nav navbar-left">
-							<li>
-								<a href="index.html">
-									ClassiCine
-								</a>
-							</li>
-						</div>
+            <nav class="navbar navbar-inverse">
+				<div class="container-fluid">
+					<div class="nav navbar-nav navbar-left">
+						<li class="icon-home">
+							<a href="index.html">
+								<span>ClassiCine</span>
+							</a>
+						</li>
 					</div>
-				</nav> 
+					<div class="nav navbar-nav navbar-right">
+						<ul class="nav navbar navbar-nav navbar-left pull-left">
+            				<li id="socmed"><a href="https://twitter.com/" target="_blank" class="fa fa-twitter fa-lg"></a></li>
+            				<li id="socmed"><a href="https://github.com/" target="_blank" class="fa fa-github fa-lg"></a></li>
+            				<li id="socmed"><a href="http://www.linkedin.com/in/" target="_blank" class="fa fa-linkedin fa-lg"></a></li>
+        				</ul>
+					</div>
+				</div>
+			</nav> 
 		</header>
 		
 		<section class="sessao">
 			<div class="container">
 				<uib-accordion-header ng-repeat="categoria in categorias">
 					<h1 class="nome-categoria">{{categoria.nome}}<h1>
-				
+					
 					<uib-carousel active="activeSlide">
 						<uib-slide ng-repeat="filme in categoria.filmes" index="$index">
-						
-							<div>
+							
+							<div class="info-filme">
+
 								<img class="capa-filme" ng-src="{{filme.imagem}}" style="margin:auto;">
 								<p class="nome-filme">{{filme.nome}}</p>
-								<a class="btn btn-primary" ng-click="assistir(filme)" href="html/player.html" role="button">Assistir</a>
-								<br/><br/><br/>
+								<a class="btn btn-primary btn-lg" 
+									ng-click="assistir(filme)" 
+									href="html/player.html" 
+									role="button">Assistir</a>
+
 							</div>
 						
 						</uib-slide>
-					</uib-carousel>
+					</uib-crousel>
+					
 				</uib-accordion-header>
 			</div>
 		</section>
@@ -62,6 +77,9 @@
 	
 	<script src="js/angular-ui-bootstrap.1.2.1.js"></script>
 	<script src="https://cdn.firebase.com/js/client/1.0.17/firebase.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="
+	sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
 	<script type="text/javascript" src="js/main.js"></script>
 </html>
