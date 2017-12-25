@@ -12,6 +12,10 @@
   min-width: 100%;
 }
 
+.carousel-indicators li { 
+	visibility: hidden; 
+}
+
 .uib-left, .uib-right {
   width: 100%
 }
