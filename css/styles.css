@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Hind:400,700");
 .main-body {
-	background-color: #424242;
+	background-color: #212121;
 	background-size: cover;
 	font-family: "Open Sans", Helvetica, Arial, sans-serif;
 	-moz-background-size: cover;
@@ -25,7 +25,10 @@
 	z-index: 1;
 	position: fixed;
 }
-
+.logo {
+	font-size: 200%; 
+	color:white;
+}
 .nome-filme {
 	color: #FFFFFF;
 }
@@ -38,8 +41,6 @@
 	margin:auto;
 	max-width: 100%;
 }
-
-
 .main-header {
     position: fixed;
     top: 0;
