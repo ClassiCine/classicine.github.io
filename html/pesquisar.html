@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="pesquisa">
+	<head>
+		<title>Pesquisa</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+		
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<meta name="description" content="Classicine">
+		<meta name="author" content="Kleber Nunes">
+		
+		<link rel="stylesheet" href="../css/ui-bootstrap-csp.css">
+	</head>
+	
+	<body class="pesquisa-body" ng-controller="PesquisaController">
+		<section class="sessao">
+			<div class="container">
+				<uib-accordion-header ng-repeat="filme in filmes">
+					<h1 class="nome-categoria">{{filme.nome}}<h1>
+				</uib-accordion-header>
+			</div>
+		</section>
+	</body>
+	
+	<script src="../js/angular-ui-bootstrap.1.2.1.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+	<script src="https://cdn.firebase.com/js/client/1.0.17/firebase.js"></script>
+	<script type="text/javascript" src="../js/pesquisa.js"></script>
+</html>

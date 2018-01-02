@@ -1,24 +1,28 @@
-var app = angular.module("main", ['ui.bootstrap']);
+var app = angular.module("pesquisa", ['ui.bootstrap']);
 var conexao = escolheConexao();
-
 var firebase = new Firebase(conexao);
-var database = firebase.ref().child('categoria');
+var data = firebase.child('categoria');
+var arr = [];
 
-app.controller('MainController', MainController);
+app.controller('PesquisaController', PesquisaController);
 
-function MainController($scope, $timeout) {
+function PesquisaController($scope, $timeout) {
 	$scope.noWrapSlides = false;
 	$scope.activeSlide = 0;
-			
-	database.on('value', function(snap) {
+	
+	data.on('value', function(snapshot) {	
 		$timeout(function() {
-			$scope.categorias = snap.val();
+			snapshot.forEach(function(snap) {
+				var filmes = snap.val().filmes;
+				filmes.forEach(function(filme) {
+					arr.push(filme);
+				});
+			}); 
 		});
 	});
-		
-	$scope.assistir = function(filme){
-		sessionStorage.setItem('filme', JSON.stringify(filme));
-	}
+	
+	$scope.filmes = arr;
+	console.log(arr);	
 }
 
 function escolheConexao() {

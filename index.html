@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="main">
+<html lang="pt-br" ng-app="main">
 	<head>
 		<title>Home</title>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -16,6 +16,7 @@
 
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	</head>
 	
 	<body class="main-body" ng-controller="MainController">
@@ -30,6 +31,24 @@
 							</a>
 						</li>
 					</div>
+					
+					<div class="navbar-collapse collapse">
+						<div class="col-sm-4 col-md-4 navbar-right">
+							<form class="navbar-form" role="search" method="get" id="search-form" name="search-form">
+								<div class="input-group">
+									<input type="text" class="form-control" placeholder="Pesquisa" id="query" name="query" value="">
+									
+									<div class="input-group-btn">
+										<button type="submit" value="Search" class="btn btn-default">
+											<span class="glyphicon glyphicon-search"></span>
+											<!--<i class="fa fa-facebook"></i>-->
+										</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+					
 				</div>
 			</nav> 
 		</header>
@@ -51,7 +70,6 @@
 									ng-click="assistir(filme)" 
 									href="html/player.html" 
 									role="button">Assistir</a>
-									
 
 							</div>
 						
@@ -64,14 +82,14 @@
 		
 		<footer class="bg-faded text-center py-2">
 			<div class="container">
-				<p class="m-0">Copyright &copy; Studio Trek 2017</p>
+				<p class="m-0">Copyright &copy; Studio Trek 2018</p>
 			</div>
 		</footer>
 	</body>
 	
 	<script src="js/angular-ui-bootstrap.1.2.1.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
 	<script src="https://cdn.firebase.com/js/client/1.0.17/firebase.js"></script>
-
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="
 	sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
