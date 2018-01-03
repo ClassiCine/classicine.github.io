@@ -5,10 +5,8 @@ app.controller('PlayerController', PlayerController);
 
 function PlayerController($scope) {
 	if(filme.links[0].url != '') {
-		console.log(filme.links[0].url);
 		$scope.url = filme.links[0].url;
 	} else {
-		console.log(filme.links[1].url);
 		$scope.url = filme.links[1].url;
 	}
 	

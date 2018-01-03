@@ -1,12 +1,10 @@
 var app = angular.module("pesquisa", ['ui.bootstrap']);
 var conexao = escolheConexao();
 var firebase = new Firebase(conexao);
-var data = firebase.child('categoria');
 var arr = [];
+var data = firebase.child('categoria');
 
 var urlParams = new URLSearchParams(window.location.search);
-console.log(urlParams.get('nome'));
-
 app.controller('PesquisaController', PesquisaController);
 
 function PesquisaController($scope, $timeout) {
@@ -21,23 +19,22 @@ function PesquisaController($scope, $timeout) {
 					arr.push(filme);
 				});
 			}); 
+
+			var search_term = urlParams.get('nome');
+			var search = search_term.toLowerCase();
+			
+			var array = jQuery.grep(arr, function(value) {
+				return value.nome.toLowerCase().indexOf(search) >= 0;
+			});
+			
+			$scope.filmes = array;
 		});
 	});
 	
-	$scope.filmes = arr;
-	console.log(arr);
+	$scope.assistir = function(filme){
+		sessionStorage.setItem('filme', JSON.stringify(filme));
+	}
 }
-
-var a = ["foo","fool","cool","god"];
-
-var search_term = 'oo'; // your search term as string
-var search = search_term;
-var array = jQuery.grep(a, function(value) {
-    return value.indexOf(search) >= 0;
-});
-
-console.log(a);
-console.log(array);
 
 function escolheConexao() {
 	var aleatorio = Math.floor((Math.random() * 3) + 1);
