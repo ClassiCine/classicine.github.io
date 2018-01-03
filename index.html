@@ -22,7 +22,8 @@
 	<body class="main-body" ng-controller="MainController">
 	
 		<header class="header-topo">
-            <nav class="navbar navbar-inverse">
+		
+            <nav class=".col-sm-4 .col-md-4 .col-lg-4 .col-xl-4 navbar navbar-inverse">
 				<div class="container-fluid">
 					<div class="nav navbar-nav navbar-left">
 						<li class="icon-home">
@@ -32,26 +33,23 @@
 						</li>
 					</div>
 					
-					<div class="navbar-collapse collapse">
-						<div class="col-sm-4 col-md-4 navbar-right">
-						
-							<form class="navbar-form" role="search" method="get" id="search-form" name="search-form">
-								<div class="input-group">
-									<input type="text" class="form-control" placeholder="Pesquisa" id="query" name="query" value="">
-									
-									<div class="input-group-btn">
-										<button type="submit" value="Search" class="btn btn-default">
-											<span class="glyphicon glyphicon-search"></span>
-										</button>
-									</div>
+					<div class=".col-sm-2 .col-md-2 .col-lg-2 .col-xl-2 navbar-right">
+						<form class="navbar-form" role="search" method="get" id="search-form" name="search-form" action="html/pesquisar.html">
+							<div class="input-group">
+								<input type="text" class="form-control" placeholder="Pesquisa" id="nome" name="nome">
+								
+								<div class="input-group-btn">
+									<button type="submit" value="Search" class="btn btn-default">
+										<span class="glyphicon glyphicon-search"></span>
+									</button>
 								</div>
-							</form>
-							
-						</div>
+							</div>
+						</form>
 					</div>
 					
 				</div>
 			</nav> 
+			
 		</header>
 		
 		<section class="sessao">

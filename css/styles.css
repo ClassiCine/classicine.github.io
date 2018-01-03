@@ -10,9 +10,11 @@
 .carousel-indicators li { 
 	visibility: hidden; 
 }
+
 .sessao {
-	margin-top: 100px;
+	margin-top: 110px;
 }
+
 .info-filme {
 	width: 100%;
 }

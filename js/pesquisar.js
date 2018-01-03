@@ -4,6 +4,9 @@ var firebase = new Firebase(conexao);
 var data = firebase.child('categoria');
 var arr = [];
 
+var urlParams = new URLSearchParams(window.location.search);
+console.log(urlParams.get('nome'));
+
 app.controller('PesquisaController', PesquisaController);
 
 function PesquisaController($scope, $timeout) {
@@ -22,8 +25,19 @@ function PesquisaController($scope, $timeout) {
 	});
 	
 	$scope.filmes = arr;
-	console.log(arr);	
+	console.log(arr);
 }
+
+var a = ["foo","fool","cool","god"];
+
+var search_term = 'oo'; // your search term as string
+var search = search_term;
+var array = jQuery.grep(a, function(value) {
+    return value.indexOf(search) >= 0;
+});
+
+console.log(a);
+console.log(array);
 
 function escolheConexao() {
 	var aleatorio = Math.floor((Math.random() * 3) + 1);
