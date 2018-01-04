@@ -24,9 +24,7 @@
 		<section class="sessao">
 			<div class="container">
 				<uib-accordion-header ng-repeat="filme in filmes">
-				
 					<div class="info-filme">
-						
 						<div class="wrapper">
 							<div class="movie-img">
 								<img class="card-img-top" ng-src="{{filme.imagem}}" alt="{{filme.nome}}" height="320" width="327">
@@ -48,9 +46,10 @@
 								
 							</div>
 						</div>
-						
 					</div>
 				</uib-accordion-header>
+				
+				<h1 class="mensagem-filme">{{mensagem}}</h1>
 			</div>
 		</section>
 	</body>

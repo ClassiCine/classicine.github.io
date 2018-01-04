@@ -28,6 +28,9 @@ function PesquisaController($scope, $timeout) {
 			});
 			
 			$scope.filmes = array;
+			if(array.length == 0) {
+				$scope.mensagem = "Nenhum filme encontrado";
+			}
 		});
 	});
 	
