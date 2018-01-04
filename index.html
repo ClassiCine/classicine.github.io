@@ -65,10 +65,19 @@
 								<img class="capa-filme" ng-src="{{filme.imagem}}" style="margin:auto;">
 								<p class="nome-filme">{{filme.nome}}</p>
 								
+								<div class="movie-btn">
+									<a 	type="button"
+										ng-click="assistir(filme)" 
+										href="player.html" 
+										role="button">Assistir</a>
+								</div>
+								
+								<!--
 								<a class="btn btn-danger btn-lg" 
 									ng-click="assistir(filme)" 
 									href="html/player.html" 
 									role="button">Assistir</a>
+								-->
 
 							</div>
 						
