@@ -24,7 +24,16 @@ function PesquisaController($scope, $timeout) {
 			var search = search_term.toLowerCase();
 			
 			var array = jQuery.grep(arr, function(value) {
-				return value.nome.toLowerCase().indexOf(search) >= 0;
+				
+				if(value.nome.toLowerCase().indexOf(search) >= 0) {
+					return value.nome.toLowerCase().indexOf(search) >= 0;
+				} else {
+					if(value.diretor.toLowerCase().indexOf(search) >= 0) {
+						return value.diretor.toLowerCase().indexOf(search) >= 0;
+					}
+				}
+				
+				
 			});
 			
 			$scope.filmes = array;
