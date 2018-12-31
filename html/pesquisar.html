@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br" ng-app="pesquisa">
 	<head>
-		<title>Classicine</title>
+		<title>ClassiCine</title>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 		
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-		<meta name="description" content="Classicine">
+		<meta name="description" content="ClassiCine">
 		<meta name="author" content="Kleber Nunes">
 		
 		<link rel="shortcut icon" href="../img/icon_classic.png" />
@@ -42,12 +42,36 @@
 			<div class="container">
 
 				<uib-accordion-header ng-repeat="filme in filmes">
+					<div class="container">
+						<div class="movie-info">
+							<img class="center-block" ng-src="{{filme.imagem}}" />
+							<div class="center-block">
+								<h3 class="text-center"><b>{{filme.nome}}</b></h3>
+								<h5 class="text-center"><b>Ano: </b>{{filme.ano}}</h5>
+								<h5 class="text-center"><b>Diretor: </b>{{filme.diretor}}</h5>
+							</div>
 
+							<div class="movie-btn">
+									<a 	type="button"
+										ng-click="assistir(filme)" 
+										href="player.html" 
+										role="button">Assistir</a>
+								</div>
+						</div>
+					</div>
+
+					
+					
+
+					<!--
 					<div class="info-filme">
 						<div class="wrapper">
+							
 							<div class="movie-img">
-								<img class="card-img-top" ng-src="{{filme.imagem}}" alt="{{filme.nome}}" height="320" width="327">
+								<img class="card-img-top" ng-src="{{filme.imagem}}" alt="{{filme.nome}}" 
+									height="320" width="327">
 							</div>
+
 							<div class="movie-info">
 							
 								<div class="movie-text">
@@ -66,6 +90,7 @@
 							</div>
 						</div>
 					</div>
+					-->
 				</uib-accordion-header>
 				
 				<h1 class="mensagem-filme">{{mensagem}}</h1>

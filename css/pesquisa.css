@@ -28,10 +28,8 @@
 }
 
 .movie-info {
-  float: left;
-  height: 320px;
-  width: 327px;
-  border-radius: 0 7px 10px 7px;
+  margin-top: 50px;
+  border-radius: 10px 7px 10px 7px;
   background-color: #ffffff;
 }
 
@@ -41,8 +39,6 @@
 }
 
 .movie-text h1 {
-  margin: 0 0 0 38px;
-  padding-top: 52px;
   font-size: 34px;
   color: #212121;
 }
@@ -74,9 +70,7 @@
 }
 
 .movie-btn {
-  height: 103px;
-  width: 327px;
-  position: relative;
+  padding: 10px 45% 10px 45%;
 }
 
 .movie-btn p {
@@ -99,11 +93,7 @@ span {
 }
 
 .movie-btn a {
-	float: right;
 	display: inline-block;
-	height: 50px;
-	width: 180px;
-	margin: 0 20px 0 10px;
 	text-align: center;
 	background-color: #d62a33;
 	background-image: -webkit-linear-gradient(top, #d62a33, #d62a33);
