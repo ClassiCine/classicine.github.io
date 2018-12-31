@@ -1,10 +1,9 @@
-.player-body {
-	background-color: #212121;
-	background-size: cover;
-	font-family: "Open Sans", Helvetica, Arial, sans-serif;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	-webkit-background-size: cover;
+@import url("https://fonts.googleapis.com/css?family=Hind:400,700");
+
+.filme-play {
+	background:black;
+	height:100%;
+	width:100%;
 }
 
 h1, h2, h3, h4, h5, h6, .text-heading {
@@ -15,12 +14,12 @@ h1 {
   font-size: 4rem;
 }
 
-.filme-play {
-	background:black;
-	height:450px;
-	width:100%;
+.info-film {
+  background:white;
+  padding: 25px 50px 25px 50px;
 }
 
+/*
 .tagline-upper {
   font-size: 5rem;
   font-weight: 700;
@@ -64,3 +63,4 @@ hr.divider {
 .map-container iframe.clicked {
   pointer-events: auto;
 }
+/*

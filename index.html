@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br" ng-app="main">
 	<head>
-		<title>Home</title>
+		<title>ClassiCine</title>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 		
@@ -9,9 +9,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<meta name="description" content="Classicine">
 		<meta name="author" content="Kleber Nunes">
-		<meta name="theme-color" content="#212121" />
 		
 		<link rel="shortcut icon" href="img/icon_classic.png" />
+
+		<link rel="stylesheet" href="css/base.css">
 		<link rel="stylesheet" href="css/styles.css">
 		<link rel="stylesheet" href="css/ui-bootstrap-csp.css">
 
@@ -20,7 +21,7 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	</head>
 	
-	<body class="main-body" ng-controller="MainController">
+	<body class="body" ng-controller="MainController">
 	
 		<header class="header-topo">
 		
@@ -55,16 +56,16 @@
 		
 		<section class="sessao">
 			<div class="container">
+
 				<uib-accordion-header ng-repeat="categoria in categorias">
-					<h1 class="nome-categoria">{{categoria.nome}}<h1>
+
+					<h1 class="text-white">{{categoria.nome}}<h1>
 					
 					<uib-carousel active="activeSlide">
-						<uib-slide ng-repeat="filme in categoria.filmes" index="$index">
-							
-							<div class="info-filme">
 
+						<uib-slide ng-repeat="filme in categoria.filmes" index="$index">
+							<div class="info-filme">
 								<img class="capa-filme" ng-src="{{filme.imagem}}" style="margin:auto;">
-								<p class="nome-filme">{{filme.nome}}</p>
 								
 								<div class="movie-btn">
 									<a 	type="button"
@@ -72,19 +73,19 @@
 										href="html/player.html" 
 										role="button">Assistir</a>
 								</div>
-								
 							</div>
-						
 						</uib-slide>
+
 					</uib-crousel>
 					
 				</uib-accordion-header>
+				
 			</div>
 		</section>
 		
-		<footer class="bg-faded text-center py-2">
-			<div class="container">
-				<p class="m-0">Copyright &copy; Studio Trek 2018</p>
+		<footer class="page-footer font-small blue pt-4">
+			<div class="footer-copyright text-center py-3">
+				<p class="text-white">Copyright © 2019 Studio Trek</p>
 			</div>
 		</footer>
 	</body>

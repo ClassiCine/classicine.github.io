@@ -1,42 +1,13 @@
 @import url("https://fonts.googleapis.com/css?family=Hind:400,700");
-.main-body {
-	background-color: #212121;
-	background-size: cover;
-	font-family: "Open Sans", Helvetica, Arial, sans-serif;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	-webkit-background-size: cover;
-}
+
 .carousel-indicators li { 
 	visibility: hidden; 
-}
-
-.sessao {
-	margin-top: 110px;
 }
 
 .info-filme {
 	width: 100%;
 }
-.header-topo {
-	position: fixed;
-	top: 0px;
-    width: 100%;
-    height: 100px;
-    padding: 0px;
-	z-index: 1;
-	position: fixed;
-}
-.logo {
-	font-size: 200%; 
-	color:white;
-}
-.nome-filme {
-	color: #FFFFFF;
-}
-.nome-categoria {
-	color: #FFFFFF; 
-}
+
 .capa-filme {
 	display: block;
 	height: auto;
